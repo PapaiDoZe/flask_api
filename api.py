@@ -27,7 +27,6 @@ def get_clientes_by_id(id):
             return jsonify(cliente)
         elif cliente.get("id") != id:
             return jsonify("Esse cliente nao existe.")
-        
 
 
 """MÉTODO POST"""
@@ -58,16 +57,6 @@ def delete_client_by_id(id):
         if cliente.get("id") == id:
             del clientes[index]
     return jsonify(clientes[index])
-
-
-
-
-
-
-
-
-
-
 
 
 app.run(port=5000, host="localhost", debug=True)
